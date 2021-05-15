@@ -19,6 +19,7 @@ const session = {
     })
 };
 
+
 app.use(session(session));
 
 const handlebars = exphbs.create({ helpers });
