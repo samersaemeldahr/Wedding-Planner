@@ -1,3 +1,9 @@
 node_modules/
 .DS_Store/
+<<<<<<< HEAD
 index.html/
+=======
+main.html
+models/Registry.js
+.env
+>>>>>>> 77ba50fc19f4076873e02d05aef82794c8197498
