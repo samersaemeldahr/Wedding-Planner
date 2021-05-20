@@ -31,6 +31,49 @@ router.post("/", async(req, res) => {
 
 /*  --  Logging In  --  */
 
+router.post("login", async (req, res) => {
+
+    // Best case scenario 
+    try {
+        // when the person tries logging in. The typical login page. 
+        
+        const user = await User.findOne({
+            where: {
+                username: req.body.username,
+            },
+        }); 
+ 
+        const isPasswordValid = user.checkPassword(req.body.password);
+
+        /* if user infomation is missing */
+
+        if (!user) { 
+            // If the username is missing
+            res.status(400).json({ message: "Username was not found." });
+            return; 
+        }
+
+        if (!isPasswordValid) {
+            // If the password is missing
+            res.status(400).json({ message: "Password not found."});
+            return;
+        }
+
+        req.session.save(() => {
+            req.session.userID = user.id; 
+            req.session.username = user.username;
+            req.session.loggedIn = true; 
+
+            res.json({
+                user, 
+                message: "welcome! You are signed in now." });
+        });
+
+    } catch (err) {
+        res.status(400).json({ message: "User account has not been found. Sign up today! "});
+    }
+
+});
 
 
 /*  --  Logging Out  --  */
