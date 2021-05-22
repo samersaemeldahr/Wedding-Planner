@@ -17,6 +17,9 @@ Guest.init(
         },
         foodChoice: {
             type: DataTypes.STRING,
+        },
+        userId: {
+            type: DataTypes.INTEGER,
         }
     },
     {
