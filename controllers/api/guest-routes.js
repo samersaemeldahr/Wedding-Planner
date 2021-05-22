@@ -5,7 +5,8 @@ router.post('/', async (req, res) => {
     try {
         const guestData = await Guest.create({
             guestName: req.body.guestName,
-            foodChoice: req.body.foodChoice
+            foodChoice: req.body.foodChoice,
+            userId: req.session.userId
         });
         res.status(200).json(guestData)
     } catch (err) {
