@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const Guest = require("../../models/Guest.js"); //referencing the Guest model
 
 router.post('/', async (req, res) => {
@@ -14,3 +15,4 @@ router.post('/', async (req, res) => {
 });
 
 module.exports = router;
+
