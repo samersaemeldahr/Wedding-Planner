@@ -1,3 +1,4 @@
+const { dasherize } = require('inflection');
 const { Sequelize, Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -21,6 +22,9 @@ Questions.init (
         },
         venueLocation: {
             type:DataTypes.STRING,
+        },
+        userId: {
+            type: DataTypes.INTEGER
         }
     },
     {
