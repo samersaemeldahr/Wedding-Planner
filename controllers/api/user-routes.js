@@ -4,21 +4,21 @@ const User = require("../../models/"); //referencing the user model
 
 /*  --  Main  --  */
 
-router.post("/", async(req, res) => {
+router.post("/", async (req, res) => {
     // best case scenario
     try {
-        const userSignUp = await User.create({
+        const newUser = await User.create({
                 // what we are creating in the User Model 
             username: req.body.username, 
             password: req.body.password, 
         }); 
 
         req.session.save(() => {
-            req.session.userID = userSignUp.id; // communicates with the id of the user.init in the models
-            req.session.username = userSignUp/username; 
+            req.session.userId = newUser.id; // communicates with the id of the user.init in the models
+            req.session.username = newUser.username; 
             req.session.loggedIn = true; // boolean to keep them logged in
 
-            res.json(userSignUp); // outputs what the variable state is as a json 
+            res.json(newUser); // outputs what the variable state is as a json 
         });
 
     // in case something goes wrong :( 
@@ -31,7 +31,7 @@ router.post("/", async(req, res) => {
 
 /*  --  Logging In  --  */
 
-router.post("login", async (req, res) => {
+router.post("/login", async (req, res) => {
 
     // Best case scenario 
     try {
@@ -60,7 +60,7 @@ router.post("login", async (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.userID = user.id; 
+            req.session.userId = user.id; 
             req.session.username = user.username;
             req.session.loggedIn = true; 
 

@@ -1,1 +1,67 @@
-Add HTML
+<div class="add-dish-container">
+  <form class="new-guest-form">
+    <label for="guest_name">
+      Guest Name:
+    </label>
+    <br />
+    <textarea id="guest_name" name="guest_name" rows="2" cols="30">
+      {{guestName}}
+    </textarea>
+    <br />
+    <label for="food">
+      Food preference:
+    </label>
+    <br />
+    <textarea id="food" name="food" rows="5" cols="30">
+      {{foodChoice}}
+    </textarea>
+    <br />
+    <button type="submit" value="Submit">
+      Submit
+    </button>
+  </form>
+</div>
+
+<br>
+<br>
+
+{{#each guests as |guest|}}
+<div class="dish col-md-5">
+  <p>
+    {{guest.id}}
+    <br>
+    Guest Name: {{guest.guestName}}
+  </p>
+  <p>
+    Food Preference: {{guest.foodChoice}}
+  </p>
+</div>
+{{/each}}
+</div>
+<script src="/js/add-guest.js"></script>
+
+
+
+{{!-- <div class="container">
+  <div class="row">
+    <h1>Please enter your information</h1>
+    <p>(By entering your information you're RSVP'd)</p>
+    <hr>
+    <form action="" class="information">
+      <label for="firstName"><b>Guest Name</b></label>
+      <input type="text" placeholder="Enter Your Guest Name" class="singup-inoform" name="name" required>
+
+
+      <label for="psw"><b>Food</b></label>
+      <input type="food" placeholder="Enter food you like to eat" class="singup-inoform" name="psw" required>
+
+      <select class="singup-inoform" id="select-1">
+        <option value="+1">+1</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <button type="submit" class="sign">submit</button>
+    </form>
+  </div>
+</div> --}}
