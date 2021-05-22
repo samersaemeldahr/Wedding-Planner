@@ -1,11 +1,14 @@
 const router = require("express").Router();
-const { Guest, Questions, Info } = require("../models");
+// const { Guest, Questions, Info } = require("../models");
+const withAuth = require('../utils/auth');
+const Questions = require("../models/Questions");
+const Guest = require("../models/Guest");
 
 // Login route
 router.get("/", async (req, res) => {
     try {
         if (req.session.loggedIn) {
-            res.redirect("/home");
+            res.redirect("home");
             return
         } else {
             res.render("login")
@@ -16,22 +19,41 @@ router.get("/", async (req, res) => {
 });
 
 // Home route
-router.get("/home", async (req, res) => {
-    try {
-        const homeData = await Questions.findAll();
-        const guestData = await Guest.findAll();
-        const infoData = await Info.findAll();
+router.get('/home', async (req, res) => {
+    const guestsData = await Guest.findAll().catch((err) => {
+        res.json(err);
+    });
+    
+    const questionsData = await Questions.findOne().catch((err) => {
+        res.json(err);
+    });
+    console.log(questionsData)
+    const guests = guestsData.map((guest) => guest.get({ plain: true }));
+    // const questions = questionsData.map((quest) => quest.get({ plain: true }));
+    res.render('home', { questionsData, guests });
+});
 
-        // we might need to map all the data
-        const allModels = { homeData, guestData, infoData };
+// router.get("/home", async (req, res) => {
+//     try {
+//         // const homeData = await Questions.findAll();
+//         // // const guestData = await Guest.findAll();
+//         // // const infoData = await Info.findAll();
+//         const questionsData = await Questions.findAll({
+//             firstName: req.params.firstName,
+//             spouseName: req.params.spouseName,
+//             weddingDate: req.params.weddingDate,
+//             venueName: req.params.venueName
+//           })
+//         // // we might need to map all the data
+//         // // const allModels = { homeData, guestData, infoData };
 
-        const data = allModels.map((dataInfo) => dataInfo.get({ plain: true }));
+//         const data = questionsData.map((dataInfo) => dataInfo.get({ plain: true }));
 
-        res.render("home", { data })
-    } catch (err) {
-        res.status(500).json(err)
-    }
-})
+//         res.render("home", {data})
+//     } catch (err) {
+//         res.status(500).json(err)
+//     }
+// })
 
 // Dashboard route
 router.get('/dashboard', async (req, res) => {
@@ -51,8 +73,16 @@ router.get('/dashboard', async (req, res) => {
 });
 
 // Guests route
-router.get("/guests", (req, res) => {
-    res.render("guests");
+// router.get("/guests", (req, res) => {
+//     res.render("guests");
+// });
+
+router.get('/guests', async (req, res) => {
+    const guestsData = await Guest.findAll().catch((err) => {
+        res.json(err);
+    });
+    const guests = guestsData.map((guest) => guest.get({ plain: true }));
+    res.render('guests', { guests });
 });
 
 // Questions route

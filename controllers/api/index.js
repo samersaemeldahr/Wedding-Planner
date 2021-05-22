@@ -9,7 +9,8 @@ const userRoutes = require('./user-routes.js');
 
 // router use 
 router.use('/user', userRoutes);
-
+router.use('/questions', questionsRoutes);
+router.use('/guests', guestRoutes)
 
 // exporting 
 module.exports = router;
