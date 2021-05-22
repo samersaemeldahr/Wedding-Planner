@@ -8,8 +8,10 @@ const questionsRoutes = require('./questions-routes.js');
 const userRoutes = require('./user-routes.js');
 
 // router use 
-router.use('/user', userRoutes);
-
+router.use("/user", userRoutes);
+router.use("/guest", guestRoutes); 
+router.use("info", infoRoutes); 
+router.use("questions", questionsRoutes); 
 
 // exporting 
 module.exports = router;

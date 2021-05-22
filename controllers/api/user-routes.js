@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require("../../models/User.js"); //referencing the user model
+const User = require("../../models/"); //referencing the user model
 
 
 /*  --  Main  --  */
