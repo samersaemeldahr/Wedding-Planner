@@ -1,17 +1,17 @@
 const User = require('./User');
-const Registry = require('./Registry');
+const Questions = require('./Questions');
 
-Registry.belongsTo(User, {
+Questions.belongsTo(User, {
     foreignKey: 'userId',
-    onDelete: 'CASCADE'
+   // onDelete: 'CASCADE'
 });
 
-User.hasMany(Registry, {
-    foreignKey: 'userId',
-    onDelete: 'CASCADE'
-});
+// User.hasMany(Questions, {
+//     foreignKey: 'userId',
+//     onDelete: 'CASCADE'
+// });
 
 module.exports = {
     User,
-    Registry
+    Questions
 };
