@@ -20,17 +20,26 @@ router.get("/", async (req, res) => {
 
 // Home route
 router.get('/home', async (req, res) => {
-    const guestsData = await Guest.findAll().catch((err) => {
+    const guestsData = await Guest.findAll({
+        where: {
+            userId: req.session.userId
+        }
+    }).catch((err) => {
         res.json(err);
     });
     
-    const questionsData = await Questions.findOne().catch((err) => {
+    const questionsData = await Questions.findAll({
+        where: {
+            userId: req.session.userId
+        }
+    }).catch((err) => {
         res.json(err);
     });
     console.log(questionsData)
     const guests = guestsData.map((guest) => guest.get({ plain: true }));
+    const questions = questionsData.map((question) => question.get({ plain: true}))[0]
     // const questions = questionsData.map((quest) => quest.get({ plain: true }));
-    res.render('home', { questionsData, guests });
+    res.render('home', { questions, guests });
 });
 
 // router.get("/home", async (req, res) => {

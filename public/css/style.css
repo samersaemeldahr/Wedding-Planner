@@ -110,8 +110,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
     margin:0 auto;
     width:431px;
   }
-<<<<<<< HEAD
-=======
   .justify-center {
     justify-content: center;
   }
@@ -125,7 +123,6 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
       background-color:#636f7a;
       padding:10px;
   }
->>>>>>> Nadhi
 .sign{
     background-color:#0075ae;
     margin-top: 20px;

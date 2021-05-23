@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const Questions = require("../../models/Questions.js"); //referencing the Questions model
 
 router.post('/', /* withAuth, */ async (req, res) => {
@@ -8,7 +9,8 @@ router.post('/', /* withAuth, */ async (req, res) => {
             spouseName: req.body.spouseName,
             weddingDate: req.body.weddingDate,
             venueName: req.body.venueName,
-            venueLocation: req.body.venueLocation
+            venueLocation: req.body.venueLocation,
+            userId: req.session.userId
         });
         res.json(questions);
     } catch (err) {
