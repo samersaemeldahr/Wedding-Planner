@@ -1,6 +1,8 @@
 #container{
     overflow-x: hidden;
-    background-color: #e5eef7;
+    background-color: #71a1d1;
+    padding:0;
+    margin:0;
 }
 
 #navbar{
@@ -85,7 +87,7 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
       font-style: normal;
       text-transform:capitalize;
   }
-  .login-form-field {
+  .nav-link{
     outline: none;
     border: none;
     background-color:#e5eef7;
