@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
                 // what we are creating in the User Model 
             username: req.body.username, 
             password: req.body.password, 
+            // userId: req.session.userId
         }); 
 
         req.session.save(() => {

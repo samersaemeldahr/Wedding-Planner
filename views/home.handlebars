@@ -1,20 +1,56 @@
-<div class="container">
-    <div class="d-flex justify-content-center">
-        <h1> {{questions.firstName}} & {{questions.spouseName}} </h1>
+<div class="container mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> {{questions.firstName}} <span style="font-size:30px ">&</span>
+                {{questions.spouseName}} </h1>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Congratulations on your big day</h5>
+            <br>
+            <i class="fas fa-glass-cheers" ; style="font-size: 32px"></i>
+            <br>
+            <br>
+            <p class="card-text">{{questions.weddingDate}}</p>
+            <p class="card-text">{{questions.venueName}}</p>
+            <p class="card-text">{{questions.venueLocation}}</p>
+        </div>
     </div>
 </div>
 
-{{#each guests as |guest|}}
-<div class="dish col-md-5">
-  <p>
-    {{guest.id}}
-    <br>
-    Guest Name: {{guest.guestName}}
-  </p>
-  <p>
-    Food Preference: {{guest.foodChoice}}
-  </p>
+<div class="container mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;">Event Details</h1>
+            <p>(Add your details <span><a href="/dashboard" >here</a></span>)</p>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Schedule: <b>{{info.greeting}}</b></p>
+            <p class="card-text">Catered by: <b>{{info.catering}}</b></p>
+            <p class="card-text">Photographer: <b>{{info.photographer}}</b></p>
+            <p class="card-text">DJ / Band: <b>{{info.dj}}</b></p>
+            <p class="card-text">Are kids allowed? <b>{{info.kids}}</b></p>
+        </div>
+    </div>
 </div>
-{{/each}}
+
+<div class="container mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> Guest List </h1>
+            <p>(Add your guests <span><a href="/guests" >here</a></span>)</p>
+        </div>
+        {{#each guests as |guest|}}
+        <div class="card-body">
+            <li class="list-group-item">Guest ID: <b>{{guest.id}}</b>
+                <br>
+                Guest Name: <b>{{guest.guestName}}</b>
+                <br>
+                Food Preference / Allergies: <b>{{guest.foodChoice}}</b>
+            </li>
+        </div>
+        {{/each}}
+    </div>
 </div>
+
 <script src="/js/add-guest.js"></script>
+<script src="/js/edit-questions.js"></script>

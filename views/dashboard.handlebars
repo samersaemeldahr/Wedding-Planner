@@ -1,38 +1,92 @@
-<div class="post card">
+{{!-- <div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center">
         <div class="card-header">
-          <h2>Edit Entry Information</h2>
+            <h1 style="text-shadow: 3px 3px lightgray;"> Please answer the following questions</h1>
         </div>
-        <form id="edit-post-form" class="card-body">
-          <input type="hidden" name="post-id" value="{{post.id}}" />
-      
-          <label class="form-label" for="post-title">Your first name</label>
-          <input type="text" name="post-name" value="{{put.}}" class="form-input" />
-      
-          <label class="form-label" for="post-name">Spouse's first name</label>
-          <input type="text" name="post-name" value="{{post.}}" class="form-input">
+        <form action="" class="card-body" id="edit-questions">
 
-          <label class="form-label" for="post-vanue-name">Venue name</label>
-          <input type="text" name="post-Venue" value="{{post.}}" class="form-input" />
+            <input type="hidden" name="questions" value="{{questions.id}}" />
 
-          <label class="form-label" for="post-location">Venue Location</label>
-          <input type="text" name="post-location" value="{{post.}}" class="form-input" />
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Your First Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" value="{{questions.firstName}}" id="firstNameEdit"
+                    required>
+            </div>
 
-          <label class="form-label" for="post-location">Wedding Date</label>
-          <input type="date" name="post-date" value="{{post.}}" class="form-input" />
-      
-          <button type="submit" class="btn">Update</button>
-      
-          <button type="button" id="delete-btn" class="btn">Delete</button>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Spouse's First Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="spouseNameEdit" value="{{questions.spouseName}}"
+                    required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Wedding Date</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="weddingDateEdit" value="{{questions.weddingDate}}">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Venue Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="venueNameEdit" value="{{questions.venueName}}">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Venue Location</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="venueLocationEdit"
+                    value="{{questions.venueLocation}}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+    </div>
+</div> --}}
+
+
+
+<div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> Add More Details</h1>
+        </div>
+        <form class="card-body" id="info-form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Schedule</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="greeting">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Catered By</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="catering">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Photographer</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="photographer">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">DJ / Band</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="dj">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Are kids Allowed?</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="kids">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </div>
-<div class="">
-    <h2>Add More Information</h2>
-    <select>
-        <option value="Greeting-Letter">Greeting Letter</option>
-        <option value="Catering">Catering</option>
-        <option value="photographer">photographer</option>
-        <option value="DJ">DJ</option>
-        <option value="entertainment">Entertainment</option>
-        <option value="kids">Are kids allowed</option>
-    </select>
-</div>
+
+<script src="/js/info.js"></script>
+<script src="/js/edit-questions.js"></script>

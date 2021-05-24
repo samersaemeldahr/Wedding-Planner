@@ -44,3 +44,12 @@ When you click on the sign up button, you are presented with usernamd and passwo
 When you click on the dashboard, you are presented with information you fill out the questions at begin after creating the account. In the dashboard you can re-edit the information like for example let's say you want to change your wedding date, you can do. Also you can add more information like some of the choices are DJ,photographer, and others.
  
 
+ Conclusion:
+
+ This assignment was unique to all of us in that it was the first time we worked together, as opposed to individually, to create a webpage use front end and back end. Because of this, we had the opportunity to use Git as it was intended: with different branches that were continuously merged and edited. We found that there is still a learning curve when comes to using Git's style of work-flow, but nothing that more practice can't make perfect
+
+Brainstorming in a group format also gave us a better idea of what it would be like to be a coder in the work force. With more people, there are more ideas, which enhances the product as a whole. It is also valuable in that each person can learn from other group members, as everyone has their own style of coding and ways of debugging.
+
+The biggest challenge we face is when it comes to individually working, some of us are fast learners and some of us are individually working. But we give each task to work on every time we meet up in class or outside of the class based on everyone's strength. That helped us to combine our work and work faster.
+
+As with any product, there is always room for improvement. Given more time, we would have been able to expand on existing features as well as add new ones. Example of adding a code for the guest to login and add them to the list rather than the user adding them. This will make it easier for the wedding planner to see who is coming or not. That being said, the wedding planner is very user and already.

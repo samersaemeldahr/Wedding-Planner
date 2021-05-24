@@ -7,7 +7,7 @@ const questionsData = async function(event) {
     const venueName = document.querySelector('input[name="venue-name"]').value;
     const venueLocation = document.querySelector('input[name="venue-location"]').value;
 
-    await fetch(`/api/questions`, {
+    await fetch(`/api/questions/`, {
       method: 'POST',
       body: JSON.stringify({
         firstName,

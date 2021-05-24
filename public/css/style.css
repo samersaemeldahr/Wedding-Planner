@@ -1,4 +1,4 @@
-#container{
+body {
     overflow-x: hidden;
     background-color: #71a1d1;
     padding:0;
@@ -21,7 +21,7 @@
     align-items: center;
   }
   
-  #username-field{
+  .form-control {
     outline: none;
     border: none;
     background-color: #e5eef7;
