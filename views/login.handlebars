@@ -1,15 +1,29 @@
-<main class="d-flex justify-content-center" id="main-holder">
-    <form id="login-form">
-        <h1 id="login-header">Login</h1>
-        <input type="text" name="username" id="username-input-login" class="login-form-field" placeholder="Username">
-        <input type="password" name="password" id="password-input-login" class="login-form-field"
-            placeholder="Password">
-        <button class="v2-button primary-button button-disabled margin-top-2x" type="submit" id="login-btn">Login</button>
+<div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;">Login</h1>
+        </div>
+        <form class="card-body" id="login-form">
+            <div class="input-group mb-3">
+                <span class="input-group-text " id="inputGroup-sizing-default">Username</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="username-input-login">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                <input type="password" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="password-input-login">
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
+
+        </form>
         <p class="terms-now">
             Don't have an account?
-            <button type="black" class="signup" type="button"><a href="/signup">Sign up now</a></button>
+            <a href="/signup">Sign up now</a>
         </p>
-    </form>
-</main>
+    </div>
+</div>
 
 <script src="/js/login.js"></script>
