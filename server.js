@@ -13,6 +13,7 @@ const cookies = {
     secret: 'Wedding Planner',
     cookie: {},
     resave: false,
+    userId: null,
     saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize

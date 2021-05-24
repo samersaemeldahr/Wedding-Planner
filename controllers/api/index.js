@@ -10,9 +10,9 @@ const userRoutes = require('./user-routes.js');
 // router use 
 
 router.use("/user", userRoutes);
-router.use("/guest", guestRoutes); 
-router.use("info", infoRoutes); 
-router.use("questions", questionsRoutes); 
+router.use("/guests", guestRoutes); 
+router.use("/info", infoRoutes); 
+router.use("/questions", questionsRoutes); 
 
 
 // exporting 

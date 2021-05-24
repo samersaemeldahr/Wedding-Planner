@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const User = require("../../models/"); //referencing the user model
+const User = require("../../models/User.js"); //referencing the user model
 
 
 /*  --  Main  --  */
@@ -11,6 +11,7 @@ router.post("/", async (req, res) => {
                 // what we are creating in the User Model 
             username: req.body.username, 
             password: req.body.password, 
+            // userId: req.session.userId
         }); 
 
         req.session.save(() => {

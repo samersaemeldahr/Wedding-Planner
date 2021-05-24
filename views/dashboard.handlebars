@@ -1,1 +1,92 @@
-Add HTML
+{{!-- <div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> Please answer the following questions</h1>
+        </div>
+        <form action="" class="card-body" id="edit-questions">
+
+            <input type="hidden" name="questions" value="{{questions.id}}" />
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Your First Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" value="{{questions.firstName}}" id="firstNameEdit"
+                    required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Spouse's First Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="spouseNameEdit" value="{{questions.spouseName}}"
+                    required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Wedding Date</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="weddingDateEdit" value="{{questions.weddingDate}}">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Venue Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="venueNameEdit" value="{{questions.venueName}}">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Venue Location</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="venueLocationEdit"
+                    value="{{questions.venueLocation}}">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div> --}}
+
+
+
+<div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> Add More Details</h1>
+        </div>
+        <form class="card-body" id="info-form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Schedule</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="greeting">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Catered By</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="catering">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Photographer</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="photographer">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">DJ / Band</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="dj">
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Are kids Allowed?</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="kids">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<script src="/js/info.js"></script>
+<script src="/js/edit-questions.js"></script>
