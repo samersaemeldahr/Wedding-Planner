@@ -7,11 +7,11 @@ router.post("/", async (req, res) => {
         // best case scenario.  
         
         // information variables to display
-        const spouse1; 
-        const spouse2; 
-        const dateOfWedding; 
-        const venueName; 
-        const venueLocation; 
+        // const spouse1; 
+        // const spouse2; 
+        // const dateOfWedding; 
+        // const venueName; 
+        // const venueLocation; 
 
 
     } catch (err) {
