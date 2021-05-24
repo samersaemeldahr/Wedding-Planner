@@ -1,18 +1,29 @@
-    <div class="container">
-        <div class="row">
-            <h1>Sign Up</h1>
-            <p>Create an account, so we can save your preferences.</p>
-            <hr>
-            <form action="" class="information" id="signup-form">
-                <label for="username-input-signup"><b>Username</b></label>
-                <input type="text" placeholder="Enter Your Username" class="singup-inoform" name="name" id="username-input-signup" required>
-
-
-                <label for="password-input-signup"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" class="singup-inoform" name="psw" id="password-input-signup" required>
-
-                <button type="submit" class="sign">submit</button>
-            </form>
+<div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;">Sign Up</h1>
+            <p>Create an account so we can save your preferences</p>
         </div>
+        <form class="card-body" id="signup-form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Username</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="username-input-signup" required>
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+                <input type="password" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="password-input-signup" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="login-btn">Submit</button>
+
+        </form>
     </div>
-    <script src="/js/signup.js"></script>
+</div>
+
+
+
+
+<script src="/js/signup.js"></script>
