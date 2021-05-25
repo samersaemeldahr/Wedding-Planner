@@ -1,6 +1,7 @@
 const loginHandler = async function(event) {
     event.preventDefault();
   
+
     // Get values from user input
     
     const usernameEl = document.querySelector('#username-input-login');
