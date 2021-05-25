@@ -1,1 +1,70 @@
-Add HTML
+<div class="container-fluid mt-4" style="width: 38rem;">
+    <div class="card text-center" >
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> Guest Info</h1>
+        </div>
+        <form class="card-body new-guest-form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Guest Name</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="guest_name" name="guest_name" >
+            </div>
+
+             <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default">Food Preference / Allergies</span>
+                <input type="text" class="form-control" aria-label="Sizing example input"
+                    aria-describedby="inputGroup-sizing-default" id="food" name="food" >
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<br>
+
+<div class="container mt-4" style="width: 38rem;">
+    <div class="card text-center">
+        <div class="card-header">
+            <h1 style="text-shadow: 3px 3px lightgray;"> Guest List </h1>
+        </div>
+        {{#each guests as |guest|}}
+        <div class="card-body">
+            <li class="list-group-item">Guest ID: <b>{{guest.id}}</b>
+                <br>
+                Guest Name: <b>{{guest.guestName}}</b>
+                <br>
+                Food Preference / Allergies: <b>{{guest.foodChoice}}</b>
+            </li>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<script src="/js/add-guest.js"></script>
+
+
+
+{{!-- <div class="container">
+  <div class="row">
+    <h1>Please enter your information</h1>
+    <p>(By entering your information you're RSVP'd)</p>
+    <hr>
+    <form action="" class="information">
+      <label for="firstName"><b>Guest Name</b></label>
+      <input type="text" placeholder="Enter Your Guest Name" class="singup-inoform" name="name" required>
+
+
+      <label for="psw"><b>Food</b></label>
+      <input type="food" placeholder="Enter food you like to eat" class="singup-inoform" name="psw" required>
+
+      <select class="singup-inoform" id="select-1">
+        <option value="+1">+1</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>
+
+      <button type="submit" class="sign">submit</button>
+    </form>
+  </div>
+</div> --}}

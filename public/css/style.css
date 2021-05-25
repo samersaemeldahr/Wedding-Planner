@@ -1,0 +1,159 @@
+body {
+    overflow-x: hidden;
+    background-color: #71a1d1;
+    padding:0;
+    margin:0;
+}
+
+#navbar{
+    display:grid;
+    justify-content:center;
+}
+#main-holder {
+    margin-top:20px;
+  }
+   
+  
+#login-form {
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .form-control {
+    outline: none;
+    border: none;
+    background-color: #e5eef7;
+    border-bottom: 2px solid #003b58;
+    font-weight: 400;
+    line-height: 38px;
+    margin: 0 auto;
+    width: 431px;
+}
+
+  .terms-now{
+    font-size: 14px;
+    line-height: inherit;
+    margin-bottom: 38px;
+    margin-top: 24px;
+  }
+
+  .signup{
+    outline: none;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    color: #0075ae;
+    font-family: proxima-nova,Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: inherit;
+    text-decoration: none;
+    letter-spacing: normal;
+    line-height: normal;
+    font-stretch: normal;
+    font-style: normal;
+    text-transform: capitalize;
+  }
+  
+#login{
+    background-color: #d9d9d9;
+    border: 1px solid transparent;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 232px;
+    height: 44px;
+    margin-top: 20px;
+    box-shadow: none;
+    justify-content: center;
+}
+[role=button] {
+    cursor: pointer;
+}
+input, button, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+  }
+  .login-form-field::placeholder {
+    color: #3a3a3a;
+  }
+  
+  #password{
+      color:#0075ae;
+      cursor: pointer;
+      font-weight: 600;
+      font-size:inherit;
+      letter-spacing:normal;
+      line-height:normal;
+      font-style: normal;
+      text-transform:capitalize;
+  }
+  .nav-link{
+    outline: none;
+    border: none;
+    background-color:#e5eef7;
+    border-bottom: 2px solid #003b58;
+    font-weight:400;
+    line-height:38px;
+    margin:0 auto;
+    width:431px;
+  }
+  .information{
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+  .singup-inoform{
+    outline: none;
+    font-weight:400;
+    line-height:38px;
+    margin:0 auto;
+    width:431px;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .hero{
+      color: white;
+      background-color:#636f7a;
+      padding:10px;
+  }
+.sign{
+    background-color:#0075ae;
+    margin-top: 20px;
+    width:431px;
+}
+  #login-form-submit {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color:gray;
+    cursor: pointer;
+    outline: none;
+  }
+
+  #select-1{
+      margin-top: 10px;
+      padding: 5px;
+  }
+  
+

@@ -4,15 +4,16 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 
 const app = express();
-const PORT = process.env.PORT || 3009;
+const PORT = process.env.PORT || 3001;
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const session = {
+const cookies = {
     secret: 'Wedding Planner',
     cookie: {},
     resave: false,
+    userId: null,
     saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize
@@ -20,9 +21,9 @@ const session = {
 };
 
 
-app.use(session(session));
+app.use(session(cookies));
 
-const handlebars = exphbs.create({ helpers });
+const handlebars = exphbs.create();
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
@@ -35,5 +36,5 @@ app.use(require('./controllers/'));
 
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}!`);
-    sequelize.sync({ force: false });
+    sequelize.sync({ force: true });
 });
