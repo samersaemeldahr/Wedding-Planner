@@ -1,7 +1,10 @@
 # Wedding-Planner
 GOAL:
 For this group project, we were tasked with creating a webpage from scratch using the front end and the back end. Here are the requirements for the coding:
-
+![screenshot1](./Assets/Screenshot-1.png.png)
+![screenshot2](./Assets/Screenshot-2.png.png)
+![screenshot3](./Assets/Screenshot-3.png.png)
+![screenshot4](./Assets/Screenshot-4.png.png)
    -Must use Node.js and Express.js to create a RSTFul API
    -Must us Handlebars.js as the template engine
    -Must use MySQL and the Sequelize ORM for the database
